@@ -9,6 +9,32 @@ export const Container = styled.div`
     height: 100vh;
     padding: 50px;
     background-color: #74EAAE;
+
+    ul{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 16px;
+
+        li{
+            margin-top: 10px;
+        }
+    }
+
+    input{
+        width: 300px;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 10px 10px 15px;
+    }
+
+    button{
+        width: 150px;
+        padding: 10px 20px;
+        background-color: #448363;
+        color: #FFF;
+        margin-top: 10px;
+        border: none;
+    }
 `;
 
 const float = keyframes`

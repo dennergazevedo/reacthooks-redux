@@ -67,16 +67,20 @@ export default function Homepage() {
         <span><b>Title:</b> {title}</span>
         <span><b>Version:</b> {version}</span>
       </Version>
+
       <ul>
         { 
           posts &&
           posts.map(post => <li key={post}>{post}</li>)
         }
       </ul>
-      <input type="text" value={postAdd} onChange={e => setPostAdd(e.target.value)}/>
+
+      <input placeholder="Digite o título aqui" type="text" value={postAdd} onChange={e => setPostAdd(e.target.value)}/>
+      
       <button onClick={handleAddPost}>
         Adicionar Post
       </button>
+
       <Icons>
         <FaGithub className="icon" onClick={() => window.open('https://github.com/dennergazevedo')} />
         <FaLinkedinIn className="icon" onClick={() => window.open('https://www.linkedin.com/in/denner-azevedo-6b7b97199/')} />
