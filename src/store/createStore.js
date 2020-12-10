@@ -2,7 +2,7 @@
 import { createStore, applyMiddleware } from 'redux';
 
 export default (reducers, middlewares) => {
-    const enhancer = applyMiddleware(...middlewares);
+    const enhancer = applyMiddleware(...middlewares); // CRIA UM ENHANCER ADICIONAR FUNCIONALIDADES EXTRAS AO STORE DO REDUX
     
-    return createStore(reducers, enhancer);
+    return createStore(reducers, enhancer); // CRIA O ESTADO GLOBAL
 };
