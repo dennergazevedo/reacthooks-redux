@@ -23,7 +23,7 @@ const persistConfig = {
 const persistedReducer = persistReducer(persistConfig, rootReducer); // RETORNA UM REDUCER ENHANCER, É UMA FUNÇÃO QUE GUARDA O ESTADO AUTOMATICAMENTE
 const store = createStore(persistedReducer, middlewares); // CRIAÇÃO DO ESTADO GLOBAL + CRIAÇÃO DA SAGA
 
-const persistor = persistStore(store); // MOSTRA AO PERSIST QUAL ESTADO DEVE GUARDAR
+const persistor = persistStore(store); // MOSTRA AO PERSIST QUAL ESTADO DEVE GUARDAR E ARMAZENA EM UMA VARIÁVEL O PERSISTOR
 
 sagaMiddleware.run(rootSaga); // INICIA O ROOT SAGA
 
