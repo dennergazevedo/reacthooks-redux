@@ -1,6 +1,6 @@
 import { takeLatest, put , all } from 'redux-saga/effects';
 
-import { addPost } from './actions';
+import { addPost, cleanPostSuccess } from './actions';
 
 export function* adicionarNewPostTitle({ payload }){
     try{
@@ -11,6 +11,12 @@ export function* adicionarNewPostTitle({ payload }){
     }
 }
 
+export function* cleanPost(){
+        yield put(cleanPostSuccess());
+        window.alert(`Posts Limpos!`);
+}
+
 export default all([
     takeLatest('@post/ADD_POST_REQUEST', adicionarNewPostTitle),
+    takeLatest('@post/CLEAN_POST_REQUEST', cleanPost),
 ]);

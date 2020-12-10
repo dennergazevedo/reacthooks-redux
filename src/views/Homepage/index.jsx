@@ -23,7 +23,7 @@ import logomarca from '../../assets/img/logo.png';
 
 // REDUX
 import { useSelector, useDispatch } from 'react-redux';
-import { addPostRequest } from '../../store/modules/post/actions';
+import { addPostRequest, cleanPostRequest } from '../../store/modules/post/actions';
 
 export default function Homepage() {
 
@@ -46,6 +46,11 @@ export default function Homepage() {
 
   function handleAddPost(){
     dispatch(addPostRequest(postAdd));
+    setPostAdd('');
+  }
+
+  function handleClean(){
+    dispatch(cleanPostRequest());
     setPostAdd('');
   }
 
@@ -79,6 +84,9 @@ export default function Homepage() {
       
       <button onClick={handleAddPost}>
         Adicionar Post
+      </button>
+      <button onClick={handleClean}>
+        Limpar State
       </button>
 
       <Icons>

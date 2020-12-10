@@ -11,3 +11,16 @@ export function addPost(title){
         payload:{ title },
     };
 }
+
+export function cleanPostRequest(){
+    return{
+        type:'@post/CLEAN_POST_REQUEST',
+    };
+}
+
+export function cleanPostSuccess(){
+    return{
+        type:'@post/CLEAN_POST_SUCCESS',
+    };
+}
+

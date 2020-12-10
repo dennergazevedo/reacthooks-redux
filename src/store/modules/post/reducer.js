@@ -11,6 +11,10 @@ export default function post(state = INITIAL_STATE, action){
             draft.data = [...state.data, action.payload.title];
             break;
         }
+        case "@post/CLEAN_POST_SUCCESS":{
+            draft.data = [];
+            break;
+        }
             
         default:
     }

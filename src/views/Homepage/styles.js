@@ -34,6 +34,7 @@ export const Container = styled.div`
         color: #FFF;
         margin-top: 10px;
         border: none;
+        cursor: pointer;
     }
 `;
 
